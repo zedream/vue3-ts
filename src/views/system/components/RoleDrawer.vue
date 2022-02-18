@@ -1,0 +1,104 @@
+<template>
+  <el-drawer
+    v-model="drawer"
+    custom-class="my-drawer"
+    title="I have a nested table inside!"
+    direction="rtl"
+    size="100%">
+    <template #title>
+      <common-title>
+        角色权限
+      </common-title>
+    </template>
+    <el-tree
+      :data="data"
+      show-checkbox
+      node-key="id"
+      :default-expand-all="true"
+      :default-expanded-keys="[2, 3]"
+      :default-checked-keys="[5]"
+      :props="defaultProps" />
+  </el-drawer>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  props: {
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup (props) {
+    const drawer = ref(props.value)
+    const defaultProps = {
+      children: 'children',
+      label: 'label'
+    }
+    const data = [
+      {
+        id: 1,
+        label: 'Level one 1',
+        children: [
+          {
+            id: 4,
+            label: 'Level two 1-1',
+            children: [
+              {
+                id: 9,
+                label: 'Level three 1-1-1'
+              },
+              {
+                id: 10,
+                label: 'Level three 1-1-2'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        label: 'Level one 2',
+        children: [
+          {
+            id: 5,
+            label: 'Level two 2-1'
+          },
+          {
+            id: 6,
+            label: 'Level two 2-2'
+          }
+        ]
+      },
+      {
+        id: 3,
+        label: 'Level one 3',
+        children: [
+          {
+            id: 7,
+            label: 'Level two 3-1'
+          },
+          {
+            id: 8,
+            label: 'Level two 3-2'
+          }
+        ]
+      }
+    ]
+
+    return {
+      drawer,
+      defaultProps,
+      data
+    }
+  }
+})
+</script>
+
+<style lang="scss">
+
+.my-drawer {
+  width: 100%;
+}
+</style>

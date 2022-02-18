@@ -1,0 +1,42 @@
+export interface TypeRootState {
+  count: number
+}
+
+export const enum UserTypes {
+  SET_ACCOUNT = 'SET_ACCOUNT',
+  SET_UID = 'SET_UID',
+  SET_CORPS = 'SET_CORPS',
+  SET_TOKEN = 'SET_TOKEN',
+  SET_SELLER_ID = 'SET_SELLER_ID',
+  CLEAR_CERTIFY = 'CLEAR_CERTIFY'
+}
+
+export const enum SettledType {
+  SET_STATE = 'SET_STATE',
+  SET_PAYMENT_AUDIT_STATUS = 'SET_PAYMENT_AUDIT_STATUS'
+}
+
+export const enum MenuTagType {
+  ADD_TAG = 'ADD_TAG',
+  REMOVE_TAG = 'REMOVE_TAG',
+  CLEAR_TAG = 'CLEAR_TAG'
+}
+
+export const enum RemoveTag {
+  REMOVE_CURRENT,
+  REMOVE_OTHER,
+  REMOVE_ALL,
+  REMOVE_ALL_TO_LEFT,
+  REMOVE_ALL_TO_RIGHT,
+  REMOVE_BY_PATH
+}
+
+export const enum CommonType {
+  SET_CITY_LIST = 'SET_CITY_LIST',
+  SET_OIL_MODEL = 'SET_OIL_MODEL',
+  SET_LOGISTIC_CORPS = 'SET_LOGISTIC_CORPS',
+  SET_TAGS_SCROLL_BTN = 'SET_TAGS_SCROLL_BTN',
+  SET_LOCK = 'SET_LOCK',
+  SET_LOCK_PWD = 'SET_LOCK_PWD',
+  SET_LOCK_MSG = 'SET_LOCK_MSG'
+}

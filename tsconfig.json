@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "watch": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+//    "noImplicitThis": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true, // 在代码中注入'use strict'
+    "noImplicitAny": false, // 不允许隐式any类型
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+//    "noEmit": true,
+    "baseUrl": ".",
+    "types": [
+//      "webpack-env",
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "img/*": [
+        "src/assets/image"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "auto-imports.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

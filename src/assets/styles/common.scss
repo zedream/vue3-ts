@@ -1,0 +1,130 @@
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.common-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background: #FE7315;
+    margin-right: 10px;
+  }
+  .common-title-content {
+    font-size: 17px;
+    color: #222222;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  .common-title-tip {
+    font-size: 14px;
+    color: #999999;
+    margin-left: 14px;
+  }
+  .back {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.my-dialog {
+  .el-dialog__header {
+    padding: 0;
+  }
+  .dialog-title {
+    height: 60px;
+    background: #FFF3E9;
+  }
+}
+
+.view-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 24px 40px;
+  overflow: hidden;
+  .view-title {
+    height: 60px;
+  }
+}
+
+.el-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-form-right {
+  float: right;
+}
+
+
+.tag-btn {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  flex-shrink: 0;
+  border-radius: 0;
+  &:hover {
+    background: #FFEBDE;
+  }
+}
+
+
+.error-container {
+  height: 100vh;
+  width: 100vw;
+  background-size: 700px 600px;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  .error-info {
+    width: 700px;
+    white-space: nowrap;
+    transform: translate(-150px, 200px);
+  }
+  .error-status {
+    position: relative;
+    color: #FF6600;
+    font-weight: 700;
+    font-size: 100px;
+    &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      height: 6px;
+      background: #FF6600;
+      width: 200px;
+      bottom: -6px;
+      left: 0;
+    }
+  }
+  .error-text {
+    color: #2c3e50;
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+}

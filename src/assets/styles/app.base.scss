@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-width: 1210px;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.el-menu-item {
+  a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+  }
+  .router-link-exact-active {
+    color: #FF6600;
+    .router-icon {
+      background: #FF6600;
+      border-color: #FF6600;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3",
+        "targets": {
+          "chrome": "58",
+          "ie": "8",
+          "edge": "17",
+          "firefox": "60",
+          "safari": "11.1"
+        }
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-typescript",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@vue/babel-plugin-jsx"
+  ]
+}
